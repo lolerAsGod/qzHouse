@@ -1,7 +1,6 @@
 var socket = io.connect("https://wall.cgcgbcbc.com");		
 		
 socket.on('connect',function() { 
-	console.log('Client has connected to the server!'); 
 	$.ajax({
 		type: "get",
 		url: "https://wall.cgcgbcbc.com/api/messages?num=3",
@@ -24,8 +23,7 @@ socket.on('connect',function() {
 	});
 });
 
-socket.on('new message',function(data) { 
-	console.log('Received a message from the server!',data); 					
+socket.on('new message',function(data) { 				
 	var n = $('.n');				
 	if(n[0].innerText != 'admin'){
 		$(".m1").addClass("m0");
@@ -113,8 +111,7 @@ function removeAdmin(){
 		}
 	});	
 }
-socket.on('admin',function(data) { 
-	console.log('Received a admin message from the server!',data); 
+socket.on('admin',function(data) {  
 	if(typeof timePross != "undefined")
 		clearTimeout(timePross);
 	timePross = setTimeout('removeAdmin()', 10000);	
