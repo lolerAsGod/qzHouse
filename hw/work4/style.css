@@ -1,0 +1,32 @@
+.message{			
+	border: white solid thin;
+	background-color: #d5f3f4;
+	color: black;
+	border-radius:25px;
+	position: relative;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 0.5%;
+}
+
+.mh{
+	color: white;
+	background-image: url(http://pic.58pic.com/58pic/13/88/00/58R58PICDh9_1024.jpg);
+}
+
+.p{
+	width: 11%;
+	float: left;
+	margin-left: 1.5%;					
+}
+
+.n{			
+	font-size: 1.5em;
+	margin-left: 2.5%;
+}
+
+.r{
+	width: 86.5%;
+	float: left;
+	margin-left: 1%;
+}

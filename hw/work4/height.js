@@ -1,0 +1,15 @@
+var s = document.getElementsByClassName('message');
+s[0].style.height = window.innerHeight / 5.6 + 'px';
+s[1].style.height = window.innerHeight / 4.1 + 'px';
+s[2].style.height = window.innerHeight / 4.1 + 'px';
+s[3].style.height = window.innerHeight / 4.1 + 'px';
+s[0].style.fontSize = window.innerHeight / 6.4 + 'px';
+s[0].style.lineHeight = s[0].style.height;
+var r = document.getElementsByClassName('r');
+r[0].style.fontSize = window.innerHeight * 0.16 + 'px';
+r[1].style.fontSize = window.innerHeight * 0.16 + 'px';
+r[2].style.fontSize = window.innerHeight * 0.16 + 'px';
+var p = document.getElementsByClassName('p');
+p[0].style.height = window.innerHeight * 0.17 + 'px';
+p[1].style.height = window.innerHeight * 0.17 + 'px';
+p[2].style.height = window.innerHeight * 0.17+ 'px';
