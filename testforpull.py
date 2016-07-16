@@ -1,3 +1,4 @@
+﻿#没错我就加一行注释
 import sys
 Onedimensionlist = []
 Twodimensionlist = []
@@ -6,7 +7,7 @@ while True:
     if message == '\n':
         break
     else:
-        message.rstrip() #去除多余的括号
+        message.rstrip() #去除多余的括号				
         partlist = message.split()   #根据空格分裂成列表
         Twodimensionlist.append(partlist)
          #读取列表字符串并将字符串转换成列表
