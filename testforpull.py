@@ -16,3 +16,4 @@ for x in Twodimensionlist:
         y = int(y) #二维列表中的元素转换成整数
         Onedimensionlist.append(y) 
 print(Onedimensionlist)
+//发给XD
