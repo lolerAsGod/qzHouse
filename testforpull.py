@@ -1,7 +1,4 @@
-#只是加一行注释！
-#加一行注释
-#再一行
-#再一行
+
 import sys
 Onedimensionlist = []
 Twodimensionlist = []
@@ -19,5 +16,3 @@ for x in Twodimensionlist:
         y = int(y) #二维列表中的元素转换成整数
         Onedimensionlist.append(y) 
 print(Onedimensionlist)
-#在后面加一行注释
-//发给XD
