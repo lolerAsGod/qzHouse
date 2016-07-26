@@ -1,0 +1,182 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="gb2312">
+		<title>school_student</title> 
+		
+		
+		<style type = "text/css"> 			
+			.header{
+				height: 65px;	
+				width: 100%;
+				
+			}
+			.header_log{
+				height: 65px;
+				float: left;
+				padding-left: 60px;
+			}
+			.header_name{
+				height: 65px;
+				float: left;
+				font-size: 24px;
+				line-height: 55px;
+				font-weight:bold;
+				font-family: sans-serif;
+			}
+			.header_search{
+				height: 34px;
+				float: right;
+				margin: 10px 30px;
+				padding: 0 12px;
+				border: 1px solid grey;
+				border-radius: 100px;
+			}
+			.header_search input{
+				height: 32px;
+				font-size: 16px;
+				border: 0;		
+				
+			}
+			.header_regist{
+				height: 65px;
+				float: right;
+				font-size: 16px;
+				line-height: 55px;
+				font-weight: bold;
+				font-family: "Helvetica Neue", tahoma, arial, "Hiragino Sans GB", "Microsoft YaHei", 宋体;
+			}
+			.header_load{
+				height: 65px;
+				float: right;
+				font-size: 16px;
+				line-height: 55px;
+				font-weight:bold;	
+				padding-right: 60px;	
+				font-family: "Helvetica Neue", tahoma, arial, "Hiragino Sans GB", "Microsoft YaHei", 宋体;
+			}
+			.school{
+				height: 1400px;
+				background-color: #e3e0e0;
+				padding: 30px 4.77% 0 4.77%;
+			}
+			.left_bar{
+				width: 20%;
+				float: left;
+				background-color: white;
+				border: 1px solid grey;
+				border-radius: 5px;
+			}
+			.school_pic{
+				width: 60%;
+				margin: 7% 20% 4% 20%;
+				border-radius: 100%;			
+			}
+			.school_name{
+				font: 16px/1.5 Helvetica Neue,tahoma,arial,"Hiragino Sans GB",Microsoft YaHei;
+				text-align: center;
+				margin-bottom: 18px;
+			}
+			.school_action{
+				font: 20px/1.5 Helvetica Neue,tahoma,arial,"Hiragino Sans GB",Microsoft YaHei;
+				text-align: center;
+				line-height: 59px;
+				border-top: 1px solid grey;
+			}
+			.present_act{
+				background-color: #63318F;
+				color: white;
+			}
+			.right_bar{
+				width: 70%;
+				float: right;
+			}
+			.student_control{
+				background-color: white;
+				width: 43%;
+				border: 1px solid grey;
+				border-radius: 5px;
+				font: 16px/1.5 Helvetica Neue,tahoma,arial,"Hiragino Sans GB",Microsoft YaHei;
+				line-height: 32px;
+				padding: 0 3% 0 3%;
+				float: left;
+			}
+			.student_name{
+				margin-left: 3%;
+			}
+			.delete_button{
+				color: #63318F;
+				float: right;
+			}
+			.student_add{
+				background-color: #63318F;
+				color: white;
+				width: 43%;
+				border: 1px solid grey;
+				border-radius: 5px;
+				font: 20px/1.5 Helvetica Neue,tahoma,arial,"Hiragino Sans GB",Microsoft YaHei;
+				line-height: 32px;
+				padding: 0 3% 0 3%;
+				float: left;
+				text-align: center;
+			}
+			.new_num{
+				border: 1.5px solid grey;
+				border-radius: 5px;
+				height: 24px;
+			}
+			</style> 
+	</head> 
+
+	<body> 
+		<div class = "header">
+			<image class = "header_log" src = "/static/img/eduery.JPG"/>
+			<div class = "header_name">FFF团烧烤教学</div>
+			{% if username != 'null' %}
+            <div class = "header_load">{{username}}</div>
+            <div class = "header_regist"><a href = "/logout/">登出</a></div>
+            <div class = "header_changepw"><a href = "/changepassword/">修改密码</a></div>
+            {% else %}
+			<div class = "header_load"><a href = "/login/">登录</a></div>
+			<div class = "header_regist"><a href = "/register/">注册</a></div>
+            {% endif %}
+			<div class = "header_search"><input type = "search" placeholder = "课程、学校、类别……"/></div>	
+		</div>	
+		<div class = "school">
+			<div class = "left_bar">
+				<image class = "school_pic" src = "eduery.JPG"></image>
+				<div class = "school_name">学校姓名</div>
+				<div class = "school_action present_act">学生管理</div>
+				<div class = "school_action">教师管理</div>
+				<div class = "school_action">课程管理</div>
+			</div>
+			<div class = "right_bar">
+				<div class = "student_control">
+					<a class = "student_num">20140134xx</a>
+					<a class = "student_name">XX</a>
+					<a class = "delete_button">删除</a>			
+				</div>
+				<div class = "student_control">
+					<a class = "student_num">20140134xx</a>
+					<a class = "student_name">XX</a>
+					<a class = "delete_button">删除</a>
+				</div>
+				<div class = "student_control">
+					<a class = "student_num">20140134xx</a>
+					<a class = "student_name">XX</a>
+					<a class = "delete_button">删除</a>
+				</div>
+				<div class = "student_add">添加</div>
+				<div class = "student_control">
+					<input type = "text" class = "new_num" placeholder = "请输入学号">
+					<a class = "student_name">未注册</a>
+					<a class = "delete_button">删除</a>
+				</div>
+			</div>
+		</div>
+	</body> 
+	<script type="text/javascript">
+	
+	</script> 
+</html>
